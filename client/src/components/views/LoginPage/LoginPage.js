@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Input } from 'antd';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
+import { withRouter } from 'react-router-dom';
 
 function LoginPage(props) {
   const dispatch = useDispatch();
@@ -66,4 +67,4 @@ function LoginPage(props) {
   );
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);
